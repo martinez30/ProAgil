@@ -4612,6 +4612,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": "2.2.0",
+          "Microsoft.EntityFrameworkCore.Sqlite": "2.2.0",
           "ProAgil.Domain": "1.0.0"
         },
         "compile": {
@@ -12539,11 +12541,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\repos\\Studies\\ProAgil\\ProAgil.API\\ProAgil.API.csproj",
+      "projectUniqueName": "c:\\repos\\Studies\\ProAgil\\ProAgil.API\\ProAgil.API.csproj",
       "projectName": "ProAgil.API",
-      "projectPath": "C:\\repos\\Studies\\ProAgil\\ProAgil.API\\ProAgil.API.csproj",
+      "projectPath": "c:\\repos\\Studies\\ProAgil\\ProAgil.API\\ProAgil.API.csproj",
       "packagesPath": "C:\\Users\\phsma\\.nuget\\packages\\",
-      "outputPath": "C:\\repos\\Studies\\ProAgil\\ProAgil.API\\obj\\",
+      "outputPath": "c:\\repos\\Studies\\ProAgil\\ProAgil.API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -12563,11 +12565,11 @@
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\repos\\Studies\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj": {
-              "projectPath": "C:\\repos\\Studies\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj"
+            "c:\\repos\\Studies\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj": {
+              "projectPath": "c:\\repos\\Studies\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj"
             },
-            "C:\\repos\\Studies\\ProAgil\\ProAgil.Repository\\ProAgil.Repository.csproj": {
-              "projectPath": "C:\\repos\\Studies\\ProAgil\\ProAgil.Repository\\ProAgil.Repository.csproj"
+            "c:\\repos\\Studies\\ProAgil\\ProAgil.Repository\\ProAgil.Repository.csproj": {
+              "projectPath": "c:\\repos\\Studies\\ProAgil\\ProAgil.Repository\\ProAgil.Repository.csproj"
             }
           }
         }
