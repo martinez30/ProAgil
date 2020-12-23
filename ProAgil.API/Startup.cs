@@ -1,7 +1,9 @@
-﻿using System;
+﻿using System.IO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -9,8 +11,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
 using ProAgil.API.Repository;
 using ProAgil.Repository;
+using Microsoft.Extensions.FileProviders;
 
 namespace ProAgil.API
 {
@@ -25,9 +30,14 @@ namespace ProAgil.API
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddDbContext<ProAgilContext>(x=> x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+        {            
+            services.AddDbContext<ProAgilContext>(
+                x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection"))
+            );
             services.AddScoped<IProAgilRepository, ProAgilRepository>();
+
+            services.AddAutoMapper();
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
             services.AddCors();
         }
@@ -46,9 +56,11 @@ namespace ProAgil.API
             }
 
             //app.UseHttpsRedirection();
-            
-            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()); 
-            app.UseStaticFiles();
+            app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());            
+            app.UseStaticFiles(new StaticFileOptions(){
+                FileProvider = new PhysicalFileProvider(Path.Combine(Directory.GetCurrentDirectory(), @"Resources")),
+                RequestPath = new Microsoft.AspNetCore.Http.PathString("/Resources")
+            });
             app.UseMvc();
         }
     }

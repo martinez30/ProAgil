@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\repos\\Studies\\ProAgil\\ProAgil.API\\ProAgil.API.csproj": {}
+    "C:\\repos\\Studies\\ProAgil\\ProAgil.API\\ProAgil.API.csproj": {}
   },
   "projects": {
-    "c:\\repos\\Studies\\ProAgil\\ProAgil.API\\ProAgil.API.csproj": {
+    "C:\\repos\\Studies\\ProAgil\\ProAgil.API\\ProAgil.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\repos\\Studies\\ProAgil\\ProAgil.API\\ProAgil.API.csproj",
+        "projectUniqueName": "C:\\repos\\Studies\\ProAgil\\ProAgil.API\\ProAgil.API.csproj",
         "projectName": "ProAgil.API",
-        "projectPath": "c:\\repos\\Studies\\ProAgil\\ProAgil.API\\ProAgil.API.csproj",
+        "projectPath": "C:\\repos\\Studies\\ProAgil\\ProAgil.API\\ProAgil.API.csproj",
         "packagesPath": "C:\\Users\\phsma\\.nuget\\packages\\",
-        "outputPath": "c:\\repos\\Studies\\ProAgil\\ProAgil.API\\obj\\",
+        "outputPath": "C:\\repos\\Studies\\ProAgil\\ProAgil.API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -31,11 +31,11 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "c:\\repos\\Studies\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj": {
-                "projectPath": "c:\\repos\\Studies\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj"
+              "C:\\repos\\Studies\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj": {
+                "projectPath": "C:\\repos\\Studies\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj"
               },
-              "c:\\repos\\Studies\\ProAgil\\ProAgil.Repository\\ProAgil.Repository.csproj": {
-                "projectPath": "c:\\repos\\Studies\\ProAgil\\ProAgil.Repository\\ProAgil.Repository.csproj"
+              "C:\\repos\\Studies\\ProAgil\\ProAgil.Repository\\ProAgil.Repository.csproj": {
+                "projectPath": "C:\\repos\\Studies\\ProAgil\\ProAgil.Repository\\ProAgil.Repository.csproj"
               }
             }
           }
@@ -49,6 +49,10 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[4.0.0, )"
+            },
             "Microsoft.AspNetCore.App": {
               "suppressParent": "All",
               "target": "Package",
@@ -79,14 +83,14 @@
         }
       }
     },
-    "c:\\repos\\Studies\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj": {
+    "C:\\repos\\Studies\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\repos\\Studies\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj",
+        "projectUniqueName": "C:\\repos\\Studies\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj",
         "projectName": "ProAgil.Domain",
-        "projectPath": "c:\\repos\\Studies\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj",
+        "projectPath": "C:\\repos\\Studies\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj",
         "packagesPath": "C:\\Users\\phsma\\.nuget\\packages\\",
-        "outputPath": "c:\\repos\\Studies\\ProAgil\\ProAgil.Domain\\obj\\",
+        "outputPath": "C:\\repos\\Studies\\ProAgil\\ProAgil.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -132,14 +136,14 @@
         }
       }
     },
-    "c:\\repos\\Studies\\ProAgil\\ProAgil.Repository\\ProAgil.Repository.csproj": {
+    "C:\\repos\\Studies\\ProAgil\\ProAgil.Repository\\ProAgil.Repository.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\repos\\Studies\\ProAgil\\ProAgil.Repository\\ProAgil.Repository.csproj",
+        "projectUniqueName": "C:\\repos\\Studies\\ProAgil\\ProAgil.Repository\\ProAgil.Repository.csproj",
         "projectName": "ProAgil.Repository",
-        "projectPath": "c:\\repos\\Studies\\ProAgil\\ProAgil.Repository\\ProAgil.Repository.csproj",
+        "projectPath": "C:\\repos\\Studies\\ProAgil\\ProAgil.Repository\\ProAgil.Repository.csproj",
         "packagesPath": "C:\\Users\\phsma\\.nuget\\packages\\",
-        "outputPath": "c:\\repos\\Studies\\ProAgil\\ProAgil.Repository\\obj\\",
+        "outputPath": "C:\\repos\\Studies\\ProAgil\\ProAgil.Repository\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -159,8 +163,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "c:\\repos\\Studies\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj": {
-                "projectPath": "c:\\repos\\Studies\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj"
+              "C:\\repos\\Studies\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj": {
+                "projectPath": "C:\\repos\\Studies\\ProAgil\\ProAgil.Domain\\ProAgil.Domain.csproj"
               }
             }
           }
