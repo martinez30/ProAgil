@@ -47,12 +47,12 @@ namespace ProAgil.API.Controllers
             try
             {
                 var file = Request.Form.Files[0];
-                var folderName = Path.Combine("","");
+                var folderName = Path.Combine("Resources","Img");
                 var pathToSave = Path.Combine(Directory.GetCurrentDirectory(), folderName);
 
                 if(file.Length > 0){
                     var fileName = ContentDispositionHeaderValue.Parse(file.ContentDisposition).FileName;
-                    var fullPath = Path.Combine(pathToSave, fileName.Replace("\"", " ")).ToString();
+                    var fullPath = Path.Combine(pathToSave, fileName.Replace("\"", " ").Trim());
 
                     using(var stream = new FileStream(fullPath, FileMode.Create)){
                         file.CopyTo(stream);
@@ -69,7 +69,7 @@ namespace ProAgil.API.Controllers
             return BadRequest("Erro ao tentar realizar upload");
         }
 
-          [HttpGet("{EventoId}")]
+        [HttpGet("{EventoId}")]
         public async Task<IActionResult> Get(int EventoId){
             try
             {
@@ -85,7 +85,7 @@ namespace ProAgil.API.Controllers
             }
         }
 
-           [HttpGet("getByTema/{tema}")]
+        [HttpGet("getByTema/{tema}")]
         public async Task<IActionResult> Get(string tema){
             try
             {
@@ -101,7 +101,7 @@ namespace ProAgil.API.Controllers
             }
         }
 
-          [HttpPost]
+        [HttpPost]
         public async Task<IActionResult> Post(EventoDto model){
             try
             {
@@ -122,7 +122,7 @@ namespace ProAgil.API.Controllers
             return BadRequest();
         }
 
-            [HttpPut("{EventoId}")]
+        [HttpPut("{EventoId}")]
         public async Task<IActionResult> Put(int EventoId, EventoDto model){
             try
             {
@@ -149,7 +149,7 @@ namespace ProAgil.API.Controllers
             return BadRequest();
         }
 
-          [HttpDelete("{EventoId}")]
+        [HttpDelete("{EventoId}")]
         public async Task<IActionResult> Delete(int EventoId){
             try
             {

@@ -20,7 +20,7 @@ namespace ProAgil.API.DTOs
         [Range(2,12000, ErrorMessage = "Quantidade de pessoas é entre 2 e 120000")]
         public int QtdPessoas { get; set; }
         
-        public string ImageURL { get; set; }
+        public string ImagemURL { get; set; }
         public string Telefone { get; set; }
 
         [EmailAddress]

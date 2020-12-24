@@ -33,7 +33,7 @@ export class EventosComponent implements OnInit {
   file: File;
   fileNameToUpdate: string;
 
-  dataAtual;
+  dataAtual: string;
 
   _filtroLista = '';
 
@@ -58,8 +58,9 @@ export class EventosComponent implements OnInit {
     this.modoSalvar = 'put';
     this.openModal(template);
     this.evento = Object.assign({}, evento);
-    this.fileNameToUpdate = evento.imageURL.toString();
-    this.evento.imageURL = '';
+    console.log(evento);
+    this.fileNameToUpdate = evento.imagemURL.toString();
+    this.evento.imagemURL = '';
     this.registerForm.patchValue(this.evento);
   }
 
@@ -120,10 +121,11 @@ export class EventosComponent implements OnInit {
 
   uploadImagem(){
     if(this.modoSalvar === 'post'){
-      const nomeArquivo = this.evento.imageURL.split('\\', 3);
-      this.evento.imageURL = nomeArquivo[2];
+      const nomeArquivo = this.evento.imagemURL.split('\\', 3);
+      this.evento.imagemURL = nomeArquivo[2];
 
-      this.eventoService.postUpload(this.file, nomeArquivo[2]).subscribe(
+      this.eventoService.postUpload(this.file, nomeArquivo[2])
+      .subscribe(
         () => {
           this.dataAtual = new Date().getMilliseconds().toString();
           this.getEventos();
@@ -131,8 +133,9 @@ export class EventosComponent implements OnInit {
         );
       }
       else{
-        this.evento.imageURL = this.fileNameToUpdate;
-        this.eventoService.postUpload(this.file, this.fileNameToUpdate).subscribe(
+        this.evento.imagemURL = this.fileNameToUpdate;
+        this.eventoService.postUpload(this.file, this.fileNameToUpdate)
+        .subscribe(
           () => {
           this.dataAtual = new Date().getMilliseconds().toString();
           this.getEventos();
@@ -172,6 +175,7 @@ export class EventosComponent implements OnInit {
       }
     }
     else{
+      console.log("erro");
       console.log(this.registerForm);
     }
   }
